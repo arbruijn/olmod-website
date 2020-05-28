@@ -1,0 +1,244 @@
+@font-face {
+    font-family: "Industry Medium";
+    src: url("/fonts/industry-medium.woff2") format("woff2"),
+    url("/fonts/industry-medium.woff") format("woff");
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'),
+       url('/fonts/roboto-v20-latin-regular.woff2') format('woff2'),
+       url('/fonts/roboto-v20-latin-regular.woff') format('woff');
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+/*ol, ul {
+    list-style: none;
+}*/
+ol {
+ counter-reset: ol;
+ list-style:none;
+ margin-left:1.5em;
+ text-indent:-1.5em;
+}
+li:before {
+text-indent:0;
+content: counters(ol, ".") ".";
+counter-increment: ol;
+display:inline-block;
+width:1.5em;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {
+    font-family: "Roboto";
+}
+
+/*h2, .header, #header {
+    font-family: "Industry Medium";
+}*/
+
+#header {
+    margin-top:1em;
+}
+
+body {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* common */
+
+body {
+    background-color: #36393f;
+    padding: 0 5px;
+}
+
+a:any-link {
+    /*color: #ff6600;*/
+    color:#fd8f06;
+    text-decoration: none;
+}
+
+a.button {
+ /*background:#0ac70a;*/
+ /*background:#779605;*/
+ background:#056796;
+ x-max-width:10em;font-size:24px;padding:0.5em  1em;
+ display:inline-block;
+}
+a.button:any-link {
+   color:white;
+   text-decoration:none;
+}
+a.button:hover {
+ /*background:#93bb00;*/
+ background:#0087c7;
+ transition:background-color 50ms linear;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+#page {
+    max-width: 50em;
+    margin: 0 auto;
+    /*background-color: black;*/
+    color: white;
+}
+
+#menu a {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#menu a:hover {
+    text-decoration: none;
+}
+
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    display: inline-block;
+    padding: 5px 15px;
+}
+
+#menu li:hover {
+    background-color: #333333;
+}
+
+#header {
+    padding-top:1em;
+    padding-left:10px;
+}
+
+#header > h1 {
+    /*background-color: black;*/
+    /*padding: 10px;*/
+    font-family: "Industry Medium";
+    font-size: 64px;
+    color: #fd8f06;
+    display:inline;
+}
+
+#header > span, #header > h1 {
+    vertical-align:15px;
+}
+
+.header {
+    color: #fd8f06;
+}
+
+@media (max-width: 600px) {
+    #header #title {
+        font-size: 48px;
+    }
+}
+
+#copyright {
+    padding-top: 10px;
+    background-color: white;
+    color: black;
+}
+
+#copyright .left {
+    float: left;
+}
+
+#copyright .right {
+    float: right;
+    text-align: right;
+}
+
+.hidden {
+    display: none;
+}
+
+.grey {
+    color: #999999;
+}
+
+.section {
+    padding: 10px;
+}
+
+h2 {
+    color: #fd8f06;
+    padding: 10px;
+}
+
+.code {
+    background-color: #333333;
+    border-color: #999999;
+    font-family: "Courier New", Courier, monospace;
+    margin: 5px 0;
+    padding: 5px 0;
+}
+
+pre {
+    display: inline;
+    font-family: "Courier New", Courier, monospace;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 19px;
+}
