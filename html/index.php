@@ -1,3 +1,9 @@
+<?php
+if ($_GET['update']) {
+    shell_exec('sudo -u arne /home/arne/bin/updolmodcurrent 2>&1');
+}
+$current = json_decode(file_get_contents("current.json"), true);
+?>
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,10 +13,10 @@
 <div id=header><h1>OLMOD</h1><!-- <span>community mods for</span> <img src="header_OLogo01.png" width="238" height="54">--></div>
 <div id=body>
 <div class="section">
-OLMOD is a collection of community mods for <a href="https://playoverload.com">Overload</a>. It enhances multiplayer with joining a match in progress, automatic downloading of community maps, extra match modes such as capture the flag and more.
+OLMOD is a collection of community mods for <a href="https://playoverload.com">Overload</a>. It enhances multiplayer with a server browser, joining a match in progress, extra match modes such as capture the flag and more.
 </div>
 <div class="section">
-<a class="button" href="https://github.com/arbruijn/olmod/releases/download/v0.2.9.2/olmod-0.2.9.2.zip">Download OLMOD v0.2.9.2</a>
+<a class="button" href="<?php echo htmlspecialchars($current["url"]); ?>">Download OLMOD <?php echo htmlspecialchars($current["version"]); ?></a>
 </div>
 <div class="section">
 <div class=header>Installation</div>
@@ -50,7 +56,7 @@ OLMOD is a collection of community mods for <a href="https://playoverload.com">O
 <a class="button" href="https://discord.playoverload.com">Join the Overload Discord for support</a>
 </div>
 <div class="section">
-For more information, see the <a href="https://github.com/arbruijn/olmod">olmod project on github</a>.
+For more information, see the <a href="https://github.com/overload-development-community/olmod">olmod project on github</a>.
 </div>
 
 <div class="section" style="color: #888;">

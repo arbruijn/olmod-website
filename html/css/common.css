@@ -132,7 +132,7 @@ a:hover {
     text-decoration: underline;
 }
 #page {
-    max-width: 50em;
+    max-width: 45em;
     margin: 0 auto;
     /*background-color: black;*/
     color: white;
