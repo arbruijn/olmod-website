@@ -20,3 +20,4 @@ demo/
 /html/dev/
 /html/data/*.json
 /html/fonts/
+/html/current.json
