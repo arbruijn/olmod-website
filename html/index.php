@@ -24,6 +24,8 @@ OLMOD is a collection of community mods for <a href="https://playoverload.com">O
 <div class=header>Installation</div>
 <div>Unzip the olmod package into the same directory as Overload. This directory is the same directory that contains the Overload executable as well as the subdirectory Overload_Data. You can then run olmod from within the same directory as Overload.
 </div>
+<div>To verify that olmod got correctly installed and started, look at the version banner at  the top left  of the game's main menu: <img src="olmod_version_banner.png" alt="overload main menu when olmod is installed" style="width:100%">
+</div>
 </div>
 <h2>Getting Started Playing Online</h2>
 <div class="section">
