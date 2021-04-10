@@ -1,0 +1,6 @@
+#!/bin/sh
+fn=`dirname $0`/../html/current.json
+curl -Ss 'https://api.github.com/repos/overload-development-community/olmod/releases' \
+	| jq 'map(select(.prerelease == false)) | .[0] | {version:.tag_name, url:.assets[0].browser_download_url}' \
+	> $fn.new
+if [ -s $fn.new ]; then mv $fn.new $fn; fi

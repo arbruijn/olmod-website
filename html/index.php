@@ -1,6 +1,8 @@
 <?php
 if ($_GET['update']) {
-    shell_exec('sudo -u arne /home/arne/bin/updolmodcurrent 2>&1');
+    $upd = dirname(__FILE__, 2) . "/bin/updolmod";
+    $user = posix_getpwuid(stat($upd)["uid"])["name"];
+    shell_exec("sudo -u $user $upd");
 }
 $current = json_decode(file_get_contents("current.json"), true);
 ?>
